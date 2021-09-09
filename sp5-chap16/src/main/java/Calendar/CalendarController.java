@@ -109,7 +109,7 @@ public class CalendarController {
 				dateList.add(calendarData);
 			}
 		}
-		System.out.println(dateList);
+		//System.out.println(dateList);
 		
 		//해당 멤버의 총 먹은 음식 가져오기
 		List<Schedule> scheduleList = scheduleDao.findByMid(memId, 0);
@@ -118,7 +118,7 @@ public class CalendarController {
 		List<Reply> replyList = replyDao.selectInCalendar(memId, 
 				Long.parseLong(dateData.getYear()), Long.parseLong(dateData.getMonth()));
 		model.addAttribute("replyList", replyList);
-		System.out.println("댓글 확인 "+dateData.getYear() +" "+ dateData.getMonth());
+		//System.out.println("댓글 확인 "+dateData.getYear() +" "+ dateData.getMonth());
 		//배열에 담음
 		model.addAttribute("dateList", dateList);		//날짜 데이터 배열
 		model.addAttribute("today_info", today_info);
@@ -201,7 +201,7 @@ public class CalendarController {
 				dateList.add(calendarData);
 			}
 		}
-		System.out.println(dateList);
+		//System.out.println(dateList);
 		
 		//해당 멤버의 총 먹은 음식 가져오기
 		List<Schedule> scheduleList = scheduleDao.findByMid(memId, 0);
@@ -228,7 +228,7 @@ public class CalendarController {
 	    List<Reply> replyList = replyDao.selectInCalendar(memId, findinYear, findinMonth);
 	    //댓글목록도 추가
 	  	model.addAttribute("replyList", replyList);
-	  	System.out.println("댓글 확인 "+dateData.getYear() +" "+ dateData.getMonth());
+	  	//System.out.println("댓글 확인 "+dateData.getYear() +" "+ dateData.getMonth());
 		
 	  //랜덤난수 하나 보내기
 	  	List<Long> memberNumList = memberDao.listingId();

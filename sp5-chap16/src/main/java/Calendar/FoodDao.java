@@ -70,15 +70,15 @@ public class FoodDao {
 	}
 	
 	public boolean registfoodIn(Food food) {
-		System.out.println(food.getName());
+//		System.out.println(food.getName());
 		return true;
 	}
 	
 	public int insertIntoMember(Long userId, Long mealNum, String foodNum, Long year,
 			Long month, Long date, String mealname, double kcal) {
 
-		System.out.print("시작 " + userId + " "+ mealNum + " " + foodNum + " " + 
-		year + " " + month + " " + date);
+		//System.out.print("시작 " + userId + " "+ mealNum + " " + foodNum + " " + 
+		//year + " " + month + " " + date);
 
 		//foodnum : foodnum, meal : meal, year: yearNum, month: monthNum, date : dateNum
 		

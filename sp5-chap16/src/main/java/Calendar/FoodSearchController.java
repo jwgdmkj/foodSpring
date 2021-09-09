@@ -299,17 +299,17 @@ public class FoodSearchController {
 		Food findedfood = foodDao.finderSpecific(searchfood_name);
 		
 		if(findedfood != null) {
-			System.out.println("아이디 " + findedfood.getID());
-			System.out.println("연 " + searchfood.getYear());
-			System.out.println("월 " + searchfood.getMonth());
-			System.out.println("일 " + searchfood.getDate());
+			//System.out.println("아이디 " + findedfood.getID());
+			//System.out.println("연 " + searchfood.getYear());
+			//System.out.println("월 " + searchfood.getMonth());
+			//System.out.println("일 " + searchfood.getDate());
 			List<Schedule> sameuserList = scheduleDao.findByFidDate(findedfood.getID(),
 	        		searchfood.getYear(),searchfood.getMonth()+1, searchfood.getDate());
 
 	        model.addAttribute("sameuserList",sameuserList);
-	        System.out.println(searchfood_name);
+	     //   System.out.println(searchfood_name);
 	    //    System.out.println(searchfood_name);
-	        System.out.println("세임유저 " + sameuserList.get(0).getMid());
+	    //    System.out.println("세임유저 " + sameuserList.get(0).getMid());
 		}
 
         return "/calendar/finduserForm";

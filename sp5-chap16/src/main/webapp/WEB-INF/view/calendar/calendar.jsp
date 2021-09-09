@@ -1039,11 +1039,11 @@ $(document).ready(function(){
                  <td width="100px" align = "center"> ${replyList.writer}</td>
                  
                  <td align="center" width="200px"> 
-                  <c:if test="${replyList.depth != '1'}">
+                   <!-- <c:if test="${replyList.depth != '1'}">
                     <button name="reply_reply" 
                      parent_id = "${replyList.reply_id}" 
-                     reply_id = "${replyList.reply_id}">댓글</button><!-- 첫댓글에만 댓글이 추가대댓글불가 -->
-                  </c:if>
+                     reply_id = "${replyList.reply_id}">댓글</button></c:if> <!-- 첫댓글에만 댓글이 추가대댓글불가 -->
+                  
                   
                   <!-- 수정 및 삭제 -->
                   <c:if test="${replyList.writer eq authInfo.email}" > 
